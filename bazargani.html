@@ -5,25 +5,24 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>شرکت بازرگانی بین المللی آرتان</title>
-    <meta name="author" content="mohahamadZareaiRobat">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="image/notteee.jpg">
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/section-one.css">
     <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
     <link rel="stylesheet" href="css/hamburgers.css">
-    <link rel="stylesheet" href="css/section-one.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/MotionPathPlugin.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
 </head>
 
 
 <!-- radloader Start -->
 
 <body>
-    <!-- radloader hanooz gozashte nashode --!>
+    <!-- radloader hanooz gozashte nashode -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -193,7 +192,7 @@
             </div>
         </div>
     </div>
-    <!--section-one end--!>
+    <!--section-one end-->
 
 
 
@@ -234,40 +233,6 @@
     </script>
     <!-- End hamburger radshodam-->
 
-
-    <script src="js/RadGsap.js"></script>
-    <!-- first add gsap js for leftRight and head -->
-    var nbOptions = 8; // number of menus
-var angleStart = -360; // start angle
-
-// jquery rotate animation
-function rotate(li,d) {
-  $({d:angleStart}).animate({d:d}, {
-   step: function(now) {
-    $(li)
-      .css({ transform: 'rotate('+now+'deg)' })
-      .find('label')
-       .css({ transform: 'rotate('+(-now)+'deg)' });
-   }, duration: 0
-  });
-}
-
-// show / hide the options
-function toggleOptions(s) {
-  $(s).toggleClass('open');
-  var li = $(s).find('li');
-  var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
-  for(var i=0; i<li.length; i++) {
-   var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
-   $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
-  }
-}
-
-$('.selector button').click(function(e) {
-  toggleOptions($(this).parent());
-});
-
-setTimeout(function() { toggleOptions('.selector'); }, 100);
 
 </body>
 
