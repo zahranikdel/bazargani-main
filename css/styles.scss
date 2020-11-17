@@ -1,0 +1,156 @@
+            @import "./variables.scss";
+            @import "./fonts";
+            @import "./Radloader";
+            /* radshodam 
+*/
+            
+            // start for defult css html
+            html {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+            }
+            
+            body {
+                line-height: 1;
+                font-family: "IRANSans";
+                height: 100%;
+                direction: rtl;
+            }
+            
+            code {
+                display: inline-block;
+            }
+            
+            code,
+            .hamburger {
+                vertical-align: middle;
+            }
+            
+            // :start
+            nav {
+                background: #e5e5e5;
+                height: 80px;
+                width: 100%;
+                padding-bottom: 90px;
+                border-bottom: 1px solid $color_greyborder;
+                z-index: 999;
+                box-shadow: 0px 0px 3px 0px $color_greyborder;
+                ul {
+                    direction: rtl;
+                    float: left;
+                    margin-left: 20px;
+                    z-index: 999;
+                }
+                li {
+                    display: inline-block;
+                    line-height: 80px;
+                    margin: 0 5px;
+                    a {
+                        color: #1a1a1a;
+                        font-size: 17px;
+                        font-weight: 500;
+                        padding: 7px 13px;
+                        border-radius: 3px;
+                        text-transform: uppercase;
+                        transition-duration: 0.9s;
+                    }
+                }
+                a.active {
+                    background: rgb(95, 114, 67);
+                    transition: .5s;
+                    text-decoration: none;
+                    color: white;
+                }
+                a:hover {
+                    color: white;
+                    background: $color-body;
+                    transition: .5s;
+                    text-decoration: none;
+                    padding: 10px;
+                    box-shadow: 0px 1px 7px -1px rgba(0, 179, 125, 0.86);
+                }
+            }
+            
+            label.logo {
+                cursor: pointer;
+                color: white;
+                font-size: 35px;
+                line-height: 73px;
+                padding: 0 60px;
+                font-weight: bold;
+                float: right;
+                img {
+                    width: 60px;
+                }
+            }
+            
+            .checkbtn {
+                font-size: 30px;
+                color: #6862c2;
+                float: left;
+                line-height: 80px;
+                margin-left: 40px;
+                cursor: pointer;
+                display: none;
+            }
+            
+            #check {
+                display: none;
+            }
+            
+            @media (max-width: 952px) {
+                label.logo {
+                    font-size: 30px;
+                    padding-right: 50px;
+                }
+                nav ul li a {
+                    font-size: 16px;
+                }
+            }
+            
+            @media (max-width: 858px) {
+                .checkbtn {
+                    display: block;
+                }
+                nav {
+                    ul {
+                        position: absolute;
+                        width: 70%;
+                        height: 466px;
+                        background-image: url("../image/landing-bg.png"), linear-gradient(189deg, #ffffff 0%, #1b4e5e 100%) !important;
+                        top: 80px;
+                        left: -100%;
+                        text-align: center;
+                        transition: all .5s;
+                        text-decoration: none;
+                        border-radius: 2%;
+                    }
+                }
+                nav ul li {
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+                nav ul li a {
+                    font-size: 20px;
+                    a:hover,
+                    a.active {
+                        background: none;
+                        color: #20fa69;
+                        text-decoration: none;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                }
+                #check:checked~ul {
+                    left: 0;
+                }
+            }
+            
+            .fixed-top {
+                transition: 0.5s;
+                transition-duration: 0.7s;
+            }
+            
+            // for fix top scroll black

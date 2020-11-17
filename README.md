@@ -1,0 +1,2 @@
+# bazargani
+for turkish bazargani
